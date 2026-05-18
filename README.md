@@ -1,132 +1,52 @@
-# 📝 Proyecto TODO - Vue 3 + JSON Server Auth
+# Sistema de Control de Estacionamiento
 
-## 📌 Descripción
+Este proyecto es una aplicación web desarrollada con Vue 3, Vite y TypeScript, conectada a un backend simulado mediante `json-server-auth`. Permite gestionar el registro de vehículos de los empleados de la empresa, organizados por áreas de trabajo.
 
-Este proyecto forma parte del módulo de **Vue 3** del Diplomado Fullstack.  
-Tiene como objetivo desarrollar una aplicación web moderna tipo **TODO**, donde los usuarios puedan gestionar tareas de manera eficiente.
+## Características
 
-La aplicación permite realizar operaciones CRUD, autenticación de usuarios y consumo de API, aplicando buenas prácticas de desarrollo frontend.
-
----
-
-## 🎯 Objetivos del Proyecto
-
-- Aplicar conceptos de Vue 3 (Composition API / Options API)
-- Consumir APIs REST usando Axios
-- Implementar autenticación con JSON Server Auth
-- Gestionar rutas públicas y protegidas
-- Utilizar variables de entorno
-- Desarrollar una interfaz moderna y responsiva
+- Autenticación segura basada en Axios.
+- Operaciones CRUD completas para el control de vehículos.
+- Buscador en tiempo real por nombre de empleado.
+- Filtro dinámico por tipo de vehículo.
 
 ---
 
-## 🧩 Funcionalidades
+## Instrucciones para la Ejecución Local
 
-### 🔐 Autenticación
-- Registro de usuarios
-- Inicio de sesión
-- Manejo de token (JWT)
-- Protección de rutas
+Siga estos pasos para clonar, instalar y levantar el proyecto sin errores de dependencias:
 
-### 📋 Gestión de tareas (TODO)
-- Crear tarea
-- Listar tareas
-- Editar tarea
-- Eliminar tarea
-
-
-### 🔎 Búsqueda y filtros
-- Buscador de tareas por titulo y contenido
-- Filtro por completado
-
-### 🧭 Navegación
-- Rutas públicas y privadas
-- Ruta dinámica 
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-- Vue 3
-- Vite
-- Axios
-- Vue Router
-- JSON Server Auth
-- CSS / SCSS
-
----
-
-## ⚙️ Configuración del entorno
-
-Crear un archivo `.env` en la raíz del proyecto:
-
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/JDilan3000/estacionamiento-vue.git](https://github.com/JDilan3000/estacionamiento-vue.git)
+cd estacionamiento-vue
 ```
+
+### 2. Configurar variables de entorno (Opcional)
+Si es necesario, configure la URL base de la API creando un archivo .env en la raíz con el siguiente contenido:
+
+```bash
 VITE_API_URL=http://localhost:3000
 ```
 
----
+### 3. Ejecutar la instalación de dependencias
+Descargue los paquetes locales requeridos tanto para el frontend como para el backend simulado:
 
-## 💻 Instalación del proyecto
-
-```
+```bash
 npm install
 ```
 
----
+### 4. Levantar la Base de Datos y Autenticación (Backend)
+Inicie el servidor de datos con soporte de reglas JWT en el puerto 3000 mediante npx:
 
-## 🚀 Ejecución en desarrollo
-
+```bash
+npx json-server-auth db.json --port 3000 -r routes.json
 ```
+
+### 5. Ejecutar el Servidor de Desarrollo (Frontend)
+En una nueva terminal, ejecute el siguiente comando para inicializar la interfaz de usuario:
+
+```bash
 npm run dev
 ```
 
----
-
-## 🏗️ Compilación para producción
-
-```
-npm run build
-```
-
----
-
-## 🗄️ Backend (JSON Server Auth)
-
-El proyecto incluye un archivo `db.json` que simula la base de datos.
-
-### Instalar json server version 0.17.1
-
-```
-npm install -g  json-server@0.17.1
-```
-
-```
-npm install -g json-server-auth@2.1.0
-```
-
-### ▶️ Ejecutar backend
-
-```
-json-server-auth db.json --port 3000 -r routes.json
-```
-
----
-
-
-## 📚 Recomendaciones
-
-### IDE
-- VS Code + extensión Vue (Volar)
-- Deshabilitar Vetur
-
-### Navegador
-- Vue Devtools
-- Activar Custom Object Formatter
-
----
-
-## 👨‍💻 Autor
-
-Proyecto desarrollado como parte del Diplomado Fullstack.
-
-
+Acceda a la aplicación mediante el enlace local generado en pantalla (usualmente http://localhost:5173).
