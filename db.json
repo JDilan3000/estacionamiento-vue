@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "juan@test.com",
+      "password": "123456",
+      "name": "Juan Dilan"
+    },
+    {
+      "email": "dilan1@test.com",
+      "password": "$2a$10$XquNSVLAzJaOvfXh9SG3RelXgR/kbf0KIY5.VU2J3a06yE3SxA7Xm",
+      "name": "dilan1",
+      "id": 2
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "employeeName": "Juan Dilan",
+      "area": "producción",
+      "vehicleType": "automóvil",
+      "plateNumber": "4521-XYZ",
+      "color": "Negro"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "employeeName": "Pedro Arze",
+      "area": "finanzas",
+      "vehicleType": "moto",
+      "plateNumber": "7895-ABC",
+      "color": "Rojo"
+    }
+  ]
+}
